@@ -32,6 +32,11 @@
 
       &:hover {
         color: var(--white);
+      }
+
+
+      &.active{
+        color: var(--white);
         font-weight: bold;
       }
 
@@ -47,5 +52,9 @@
 
       }
     }
+  }
+
+  button {
+    margin-left: auto;
   }
 }
