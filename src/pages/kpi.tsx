@@ -2,8 +2,8 @@ import { ChangeEvent, useEffect, useMemo, useState } from "react"
 
 const initialValues = () => {
   return {
-      numero1: 0,
-      numero2: 90,
+      real: 0,
+      peso: 0,
       resultado: 0
   }
 }
@@ -14,8 +14,8 @@ export default function  Kpi (){
   
 
   useEffect(() => {
-    if (values.numero1 > 0) {
-      const resultado = (values.numero1 * values.numero2) / 100;
+    if (values.real > 0) {
+      const resultado = (values.real * values.peso) / 100;
       
       setResultado(resultado);
     }
@@ -35,7 +35,7 @@ export default function  Kpi (){
     <input 
     type="number" 
     name="numero1"
-    value={values.numero1}
+    value={values.real}
     
     onChange={(e)=> onChange(e)} 
     placeholder="seu real %"
@@ -43,7 +43,7 @@ export default function  Kpi (){
 
 <input 
     type="text" 
-    value={values.numero2} 
+    value={values.peso} 
     name="numero2"
     onChange={(e)=> onChange(e)} 
     placeholder="peso do kpi"
